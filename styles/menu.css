@@ -1,0 +1,21 @@
+/* menu.css - Styles for Menu and Dark Mode */
+#menu {
+  display: none;
+}
+
+#menu.open {
+  display: block;
+}
+
+#menu-btn {
+  display: block;
+  background: none;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}

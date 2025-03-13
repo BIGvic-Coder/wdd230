@@ -1,0 +1,92 @@
+/* Normalize styles across browsers */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+strong,
+ol,
+ul,
+li,
+form,
+label,
+input,
+button,
+table,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Make sure HTML takes full height */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Apply border-box model */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Consistent line-height across browsers */
+body {
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+}
+
+/* Reset list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Anchor tag normalization */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image normalization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Button reset */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Table normalization */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Remove focus outline for better UX */
+button:focus,
+input:focus,
+textarea:focus,
+a:focus {
+  outline: none;
+}

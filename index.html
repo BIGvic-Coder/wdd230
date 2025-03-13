@@ -5,60 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="WDD 230 - Web Frontend Development | Victor  | Course Assignment Portal"
+      content="Chamber of Commerce - Promoting Local Businesses"
     />
     <meta name="author" content="Victor Talabi" />
-    <title>Victor Talabi - WDD 230 - Web Frontend Development</title>
-    <head>
-      <link rel="stylesheet" href="styles/normalize.css" />
-      <link rel="stylesheet" href="styles/base.css" />
-      <link rel="stylesheet" href="styles/larger.css" />
-      <link rel="stylesheet" href="styles/menu.css" />
-    </head>
+    <title>Chamber of Commerce</title>
+    <link rel="icon" href="week01/images/fav (2).webp" />
+    <meta property="og:title" content="Chamber of Commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/business.jpg" />
+    <meta
+      property="og:url"
+      content="https://bigvic-coder.github.io/wdd230/chamber/"
+    />
+    <link rel="stylesheet" href="./week01/styles/normalize.css" />
+    <link rel="stylesheet" href="./week01/styles/site-plan.css" />
   </head>
   <body>
     <header>
-      <button id="dark-mode-toggle">🌙 Dark Mode</button>
       <button id="menu-btn">☰</button>
-      <!-- Hamburger Button -->
       <nav id="menu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Join Us</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
-      <img src="images/fresh1.jpg" alt="Profile Picture" />
-      <span>Victor Talabi</span>
     </header>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="week01/chamber/index.html">Chamber</a></li>
-        <li><a href="week01/chamber/chamber-site-plan.html">Site Plan</a></li>
-        <li>
-          <a href="week01/chamber/membership-form.html">Membership Form</a>
-        </li>
-      </ul>
-    </nav>
 
     <main>
-      <section class="card">
-        <h2>Learning Activities</h2>
-        <ul>
-          <!-- Links will be added here -->
-        </ul>
+      <!-- ✅ Hero Section (Best place for a main image) -->
+      <section class="hero">
+        <img
+          src="./week01/images/bussiness.webp"
+          alt="Cityscape representing Chamber of Commerce"
+          class="hero-image"
+        />
+        <a href="#" class="cta-button">Join the Chamber</a>
       </section>
-      <section class="card">
-        <h2>Information</h2>
-        <p>Weather info placeholder</p>
-        <p>Page visits placeholder</p>
+
+      <section class="events">
+        <h2>Upcoming Events</h2>
+        <p>Placeholder event details...</p>
+      </section>
+
+      <section class="weather">
+        <h2>Weather</h2>
+        <p>Weather info placeholder...</p>
+      </section>
+
+      <!-- ✅ Business Spotlights Section (Feature the image again) -->
+      <section class="spotlights">
+        <h2>Business Spotlights</h2>
+        <img
+          src="week01/images/business 2.webp"
+          alt="Business networking event"
+          class="spotlight-image"
+        />
+        <div class="spotlight">Placeholder business ad...</div>
       </section>
     </main>
+
     <footer>
-      <p>&copy; <span id="year"></span> • Victor Talabi • Nigeria</p>
+      <p>&copy; <span id="year"></span> Victor Talabi | WDD 230 Project</p>
       <p id="lastModified"></p>
     </footer>
+
     <script src="scripts/getDates.js"></script>
     <script src="scripts/menu.js"></script>
   </body>

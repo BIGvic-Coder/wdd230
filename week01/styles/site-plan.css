@@ -1,0 +1,104 @@
+/* Normalize CSS */
+@import url("normalize.css");
+
+/* Typography */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1,
+h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: #004080;
+  border-bottom: 2px solid #ffd700;
+  padding-bottom: 5px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.color-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+}
+
+.primary {
+  background-color: #004080;
+}
+
+.accent {
+  background-color: #ffd700;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #004080;
+  color: white;
+  margin-top: 20px;
+}
+/* Reduce the hero image size */
+.hero img {
+  max-width: 100%;
+  height: auto;
+  width: 80%; /* Adjust width as needed */
+  display: block;
+  margin: 0 auto;
+}
+
+/* Reduce the spotlight image size */
+.spotlight-image {
+  max-width: 100%;
+  width: 60%; /* Adjust width as needed */
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Ensure images inside wireframe and other sections are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,21 @@
+/* Responsive Design */
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .hero-content {
+    flex-direction: row;
+  }
+
+  .hero-image {
+    width: 50%;
+  }
+}

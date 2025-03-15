@@ -1,0 +1,62 @@
+/* Ensure this only applies to screens wider than 768px */
+@media screen and (min-width: 768px) {
+  /* Navigation: Make it horizontal */
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    list-style: none;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+
+  /* Remove the mobile menu button */
+  #menu-btn {
+    display: none;
+  }
+
+  /* Hero Section: Adjust image size and text */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 80%; /* Reduce image size */
+    max-height: 500px;
+  }
+
+  .cta-button {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+  }
+
+  /* Business Spotlights: Display in Grid */
+  .spotlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .spotlight {
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-image {
+    max-width: 1000px;
+  }
+
+  .spotlight-image {
+    max-width: 800px;
+  }
+}

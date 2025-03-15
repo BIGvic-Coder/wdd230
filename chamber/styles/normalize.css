@@ -1,0 +1,29 @@
+/* Reset margins and paddings */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Make sure all elements use the same box-sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Set a standard font size */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}

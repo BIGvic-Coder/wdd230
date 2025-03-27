@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chamber of Commerce - Discover Local Businesses"
+    />
+    <meta name="author" content="Victor Talabi" />
+    <title>Discover - Chamber of Commerce</title>
+    <link rel="icon" href="week01/images/fav (2).webp" />
+    <meta property="og:title" content="Discover - Chamber of Commerce" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="week01/images/business.jpg" />
+    <meta
+      property="og:url"
+      content="https://bigvic-coder.github.io/wdd230/chamber/discover.html"
+    />
+
+    <!-- Using existing CSS files -->
+    <link rel="stylesheet" href="week01/styles/normalize.css" />
+    <link rel="stylesheet" href="week01/styles/base.css" />
+    <link rel="stylesheet" href="week01/styles/site-plan.css" />
+    <link rel="stylesheet" href="week01/styles/larger.css" />
+  </head>
+  <body>
+    <header>
+      <button id="menu-btn">☰</button>
+      <nav id="menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Join Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content: Sidebar and Gallery -->
+    <main class="grid-container">
+      <!-- Sidebar Section -->
+      <aside class="sidebar">
+        <h2>Visitor Info</h2>
+        <p id="visitMessage">Checking your last visit...</p>
+        <h2>Local Demographics</h2>
+        <p>Population: 150,000</p>
+        <p>Median Income: $60,000</p>
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>Business Networking - March 30</li>
+          <li>Community Fair - April 12</li>
+        </ul>
+      </aside>
+
+      <!-- Gallery Section -->
+      <section class="gallery">
+        <h2>Local Attractions</h2>
+        <div class="image-container">
+          <figure>
+            <img
+              data-src="week01/images/HS.jpg"
+              alt="Attraction 1"
+              class="lazy"
+              loading="lazy"
+            />
+            <figcaption>Historic City Center</figcaption>
+          </figure>
+          <figure>
+            <img
+              data-src="week01/images/art musium.jpg"
+              alt="Attraction 2"
+              class="lazy"
+              loading="lazy"
+            />
+            <figcaption>Modern Art Museum</figcaption>
+          </figure>
+          <figure>
+            <img
+              data-src="week01/images/market.jpg"
+              alt="Attraction 3"
+              class="lazy"
+              loading="lazy"
+            />
+            <figcaption>Local Market Street</figcaption>
+          </figure>
+          <figure>
+            <img
+              data-src="week01/images/walk.jpg"
+              alt="Attraction 4"
+              class="lazy"
+              loading="lazy"
+            />
+            <figcaption>Scenic River Walk</figcaption>
+          </figure>
+          <figure>
+            <img
+              data-src="week01/images/historical.jpg"
+              alt="Attraction 5"
+              class="lazy"
+              loading="lazy"
+            />
+            <figcaption>Historic Monument</figcaption>
+          </figure>
+          <figure>
+            <img
+              data-src="week01/images/local.jpg"
+              alt="Attraction 6"
+              class="lazy"
+              loading="lazy"
+            />
+            <figcaption>Local Festival</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Victor Talabi | WDD 230 Project</p>
+      <p id="lastModified"></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="week01/scripts/getDates.js"></script>
+    <script src="week01/scripts/menu.js"></script>
+    <script src="week01/scripts/visitTracker.js"></script>
+  </body>
+</html>

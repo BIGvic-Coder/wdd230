@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Chamber of Commerce - Form Page" />
+    <meta name="author" content="Victor Talabi" />
+    <title>Form - WDD230 Course</title>
+    <link rel="icon" href="week01/images/fav (2).webp" />
+    <meta property="og:title" content="Form - WDD230 Course" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="week01/images/business.jpg" />
+    <meta
+      property="og:url"
+      content="https://bigvic-coder.github.io/wdd230/form.html"
+    />
+
+    <!-- Include existing CSS files -->
+    <link rel="stylesheet" href="week01/styles/normalize.css" />
+    <link rel="stylesheet" href="week01/styles/base.css" />
+    <link rel="stylesheet" href="week01/styles/site-plan.css" />
+    <link rel="stylesheet" href="week01/styles/larger.css" />
+    <!-- New form-specific CSS -->
+    <link rel="stylesheet" href="week01/styles/form.css" />
+  </head>
+  <body>
+    <!-- Header and Navigation (from the course home page) -->
+    <header>
+      <h1>WDD230 Course Website</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="form.html">Form</a></li>
+          <!-- Additional navigation items as needed -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main area with the form -->
+    <main>
+      <h2>Submit Your Information</h2>
+      <form
+        id="userForm"
+        method="get"
+        action="record.html"
+        onsubmit="return validateForm();"
+      >
+        <!-- Username Field -->
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            pattern="[A-Za-z0-9]{8,}"
+            title="Password must be at least 8 alphanumeric characters"
+          />
+        </div>
+
+        <!-- Confirm Password Field -->
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            required
+          />
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email (must be @byui.edu):</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@byui\.edu"
+            title="Please enter a valid email address ending with @byui.edu"
+          />
+        </div>
+
+        <!-- Page Rating Field -->
+        <div class="form-group">
+          <label for="rating">Page Rating (1 to 10):</label>
+          <input
+            type="range"
+            id="rating"
+            name="rating"
+            min="1"
+            max="10"
+            step="1"
+            value="5"
+            oninput="updateRating(this.value)"
+          />
+          <span id="ratingValue">5</span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Footer (from the course home page) -->
+    <footer>
+      <p>&copy; Victor Talabi | WDD230 Course Project</p>
+    </footer>
+
+    <!-- Inline JavaScript for form validation and range display -->
+    <script>
+      // Update the displayed range value on input change
+      function updateRating(val) {
+        document.getElementById("ratingValue").textContent = val;
+      }
+
+      // Validate that the passwords match before submission
+      function validateForm() {
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirmPassword");
+        if (password.value !== confirmPassword.value) {
+          alert("Passwords do not match. Please try again.");
+          // Clear both password fields
+          password.value = "";
+          confirmPassword.value = "";
+          // Focus on the first password field
+          password.focus();
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

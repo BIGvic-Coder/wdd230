@@ -6,7 +6,7 @@ body {
   background-color: #f8f8f8;
 }
 
-/* Grid Layout for Discover Page */
+/* Grid Layout for Discover and Join Pages */
 .grid-container {
   display: grid;
   grid-template-areas: "sidebar content";
@@ -36,48 +36,56 @@ body {
   margin-bottom: 10px;
 }
 
-/* Gallery Styling */
-.gallery {
+/* Membership Form Styling */
+.form-container {
   grid-area: content;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.gallery h2 {
+.form-container h2 {
   margin-bottom: 15px;
 }
 
-.image-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+form {
+  display: flex;
+  flex-direction: column;
 }
 
-.image-container figure {
-  margin: 0;
-  text-align: center;
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.image-container figure figcaption {
-  margin-top: 5px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* Lazy Loading Effect for Images */
-.gallery img {
+input,
+select,
+textarea {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out, transform 0.3s ease;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.gallery img.loaded {
-  opacity: 1;
-  transform: scale(1);
+textarea {
+  resize: vertical;
+  height: 100px;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+input[type="submit"] {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0055a5;
 }
 
 /* Mobile View: Single Column Layout */

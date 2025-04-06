@@ -1,0 +1,27 @@
+{
+  "weeks": [
+    {
+      "week": "Week 1",
+      "links": [
+        { "url": "week01/activity1.html", "title": "Intro Activity" },
+        { "url": "week01/activity2.html", "title": "Flexbox Practice" }
+      ]
+    },
+    {
+      "week": "Week 2",
+      "links": [{ "url": "week02/design.html", "title": "Design Principles" }]
+    },
+    {
+      "week": "Week 3",
+      "links": [{ "url": "week03/form.html", "title": "HTML Forms" }]
+    },
+    {
+      "week": "Week 4",
+      "links": [{ "url": "week04/images.html", "title": "Lazy Load Images" }]
+    },
+    {
+      "week": "Week 5",
+      "links": [{ "url": "week05/weather.html", "title": "Weather API" }]
+    }
+  ]
+}

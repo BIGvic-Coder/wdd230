@@ -1,185 +1,123 @@
-/* Reset some basic styles */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* General Body Styling */
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-
-/* Header Styling */
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
+.view-buttons {
   text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-}
-
-/* Navigation Styling */
-nav {
-  background-color: #222;
-  padding: 10px 0;
   margin-bottom: 20px;
+}
+
+.view-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.view-buttons button:hover {
+  background-color: #0055aa;
+}
+
+#directory.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+#directory.list {
+  display: block;
+}
+
+.member {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.list .member {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 15px;
+}
+
+.member img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.member h3 {
+  margin: 10px 0;
+}
+
+.member p {
+  margin: 5px 0;
+}
+
+.member a {
+  color: #003366;
+  text-decoration: none;
+}
+
+.member a:hover {
+  color: #0055aa;
+}
+
+/* General Navigation Bar Styling */
+nav {
+  background-color: #003366;
+  padding: 10px 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
-nav li {
-  margin: 0 15px;
+nav ul li {
+  margin: 0 20px;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-nav a:hover {
-  color: #f39c12;
-}
-
-/* Main Content Styling */
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Section Styling */
-section {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-/* Links Container */
-#links-container {
-  padding: 10px;
-}
-
-#links-container section {
-  margin-bottom: 20px;
-}
-
-#links-container ul {
-  list-style-type: none;
-}
-
-#links-container li {
-  margin: 5px 0;
-}
-
-#links-container a {
-  color: #2c3e50;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-#links-container a:hover {
-  text-decoration: underline;
-  color: #f39c12;
-}
-
-/* Weather Card Styling */
-#weather-card {
-  background-color: #ecf0f1;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  margin-top: 20px;
-}
-
-#weather-card p {
-  margin-bottom: 10px;
-}
-
-#weather-icon {
-  width: 50px;
-  height: 50px;
-}
-
-/* Learning Activities Section */
-.learning-activities {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-}
-
-.learning-activities a {
-  display: block;
-  background-color: #3498db;
+nav ul li a {
   color: white;
-  padding: 15px;
   text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.learning-activities a:hover {
-  background-color: #2980b9;
-}
-
-/* Footer Styling */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  margin-top: 40px;
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-footer #year {
   font-weight: bold;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-footer #lastModified {
-  font-size: 0.9rem;
-  color: #ccc;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #0055aa;
+  color: white;
+  border-radius: 5px;
 }
 
-/* Media Query for Smaller Screens */
-@media screen and (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-
+/* Additional Mobile Responsive Styling */
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
   }
 
-  nav li {
+  nav ul li {
     margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .list .member {
+    flex-direction: column;
+    align-items: center;
   }
 }

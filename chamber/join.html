@@ -10,19 +10,20 @@
     <meta name="author" content="Victor Talabi" />
     <title>Join the Chamber</title>
     <link rel="icon" href="../chamber/images/fav (2).webp" />
-    <link rel="stylesheet" href="../chamber/styles/normalize.css" />
-    <link rel="stylesheet" href="../chamber/styles/base.css" />
-    <link rel="stylesheet" href="../chamber/styles/larger.css" />
-    <link rel="stylesheet" href="../chamber/styles/menu.css" />
+    <link rel="stylesheet" href="../week01/styles/normalize.css" />
+    <link rel="stylesheet" href="../week01/styles/newstyles.css" />
+    <link rel="stylesheet" href="../week01/styles/larger.css" />
+    <link rel="stylesheet" href="../week01/styles/site-plan.css" />
+    <link rel="stylesheet" href="../week01/styles/form.css" />
   </head>
   <body>
     <header>
       <button id="menu-btn">☰</button>
       <nav id="menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="join.html">Join Us</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="form.html">Events</a></li>
+          <li><a href="/chamber/join.html">Join Us</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -39,56 +40,71 @@
             <li><strong>Gold:</strong> Premium promotions & training.</li>
           </ul>
         </aside>
+
         <section class="form-container">
           <h2>Membership Application</h2>
-          <form action="thankyou.html" method="get">
-            <label for="first-name"
-              >First Name:
-              <input type="text" id="first-name" name="first-name" required
-            /></label>
-            <label for="last-name"
-              >Last Name:
-              <input type="text" id="last-name" name="last-name" required
-            /></label>
-            <label for="title"
-              >Title/Position:
+          <form action="thankyou.html" method="get" class="membership-form">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="title">Title/Position</label>
               <input
                 type="text"
                 id="title"
                 name="title"
                 pattern="[A-Za-z\-\s]{7,}"
-            /></label>
-            <label for="email"
-              >Email:
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 required
                 placeholder="example@email.com"
-            /></label>
-            <label for="phone"
-              >Mobile Phone: <input type="tel" id="phone" name="phone" required
-            /></label>
-            <label for="business"
-              >Business/Organization Name:
-              <input type="text" id="business" name="business" required
-            /></label>
-            <label for="membership"
-              >Membership Level:
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Mobile Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="form-group">
+              <label for="business">Business/Organization Name</label>
+              <input type="text" id="business" name="business" required />
+            </div>
+
+            <div class="form-group">
+              <label for="membership">Membership Level</label>
               <select id="membership" name="membership">
                 <option value="NP">Non-Profit</option>
                 <option value="Bronze">Bronze</option>
                 <option value="Silver">Silver</option>
                 <option value="Gold">Gold</option>
               </select>
-            </label>
-            <label for="description"
-              >Business Description:
+            </div>
+
+            <div class="form-group">
+              <label for="description">Business Description</label>
               <textarea id="description" name="description"></textarea>
-            </label>
+            </div>
+
             <input type="hidden" id="timestamp" name="timestamp" />
-            <input type="submit" value="Apply Now" />
+
+            <div class="form-group">
+              <input type="submit" value="Apply Now" class="submit-btn" />
+            </div>
           </form>
         </section>
       </section>

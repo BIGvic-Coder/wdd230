@@ -6,16 +6,64 @@
     <meta name="description" content="WDD 230 - Web Frontend Development" />
     <meta name="author" content="Victor Talabi" />
     <title>WDD 230 - Victor Talabi</title>
-    <link rel="icon" href="week01/images/fav (2).webp" />
+    <link rel="icon" href="chamber/Images/fav (2).webp" />
 
-    <!-- Linking the existing CSS files -->
     <link rel="stylesheet" href="week01/styles/normalize.css" />
     <link rel="stylesheet" href="week01/styles/base.css" />
     <link rel="stylesheet" href="week01/styles/larger.css" />
     <link rel="stylesheet" href="week01/styles/newstyles.css" />
+    <style>
+      #banner {
+        background-color: #3eff3b;
+        color: #000;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+      }
+
+      #banner button {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        background: transparent;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      .spotlights {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 1rem;
+      }
+
+      .spotlight {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .spotlight img {
+        max-width: 100%;
+        border-radius: 8px;
+        height: auto;
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Banner -->
+    <div id="banner" style="display: none">
+      📣 Join us for the Chamber of Commerce Meet and Greet – Wednesday at 7:00
+      p.m.
+      <button onclick="document.getElementById('banner').style.display='none'">
+        ❌
+      </button>
+    </div>
+
     <header>
       <h1>Victor Talabi</h1>
     </header>
@@ -24,16 +72,18 @@
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
-        <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+        <li>
+          <a href="week01/chamber-site-plan.html/chamber-site-plan.html"
+            >Site Plan</a
+          >
+        </li>
       </ul>
     </nav>
 
     <main>
       <section>
         <h2>Weekly Links</h2>
-        <div id="links-container">
-          <!-- Links will be populated here dynamically -->
-        </div>
+        <div id="links-container"></div>
 
         <div id="weather-card">
           <p><strong>Temperature:</strong> <span id="temperature"></span> °F</p>
@@ -41,14 +91,18 @@
             <strong>Condition:</strong> <span id="weather-description"></span>
           </p>
           <img id="weather-icon" src="" alt="Weather Icon" />
+          <div id="forecast"></div>
         </div>
       </section>
 
       <section>
+        <h2>Spotlight Members</h2>
+        <div class="spotlights" id="spotlights"></div>
+      </section>
+
+      <section>
         <h2>Learning Activities</h2>
-        <div class="learning-activities">
-          <!-- Dynamic links will be injected here by links.js -->
-        </div>
+        <div class="learning-activities"></div>
       </section>
     </main>
 
@@ -61,8 +115,9 @@
     <script src="week01/scripts/weather.js"></script>
     <script src="week01/scripts/links.js"></script>
     <script src="week01/scripts/weekLinks.js"></script>
+    <script src="week01/scripts/spotlight.js"></script>
+    <script src="week01/scripts/banner.js"></script>
     <script>
-      // JS for year and last modified
       document.getElementById("year").textContent = new Date().getFullYear();
       document.getElementById("lastModified").textContent =
         "Last Modified: " + document.lastModified;
